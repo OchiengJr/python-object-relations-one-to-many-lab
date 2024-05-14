@@ -1,9 +1,14 @@
-tags:
-  - jupyter
-  - python
+# Step 1: Create a script file with a shebang line
+script_content = """#!/usr/bin/env python3
 
-languages: python
+print("Hello, world!")
+"""
 
-jupyter_notebook: true
+with open("script.py", "w") as file:
+    file.write(script_content)
 
-resources: 0
+# Step 2: Make the script executable
+!chmod +x script.py
+
+# Verify the script can be executed
+!./script.py
